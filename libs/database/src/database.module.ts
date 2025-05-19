@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common'
 import { ConfigModule, ConfigService } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm'
+import { User, UserHistory, UserSecret } from './entities'
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { TypeOrmModule } from '@nestjs/typeorm'
         database: config.get<string>('DATABASE', 'database'),
         username: config.get<string>('USERNAME', 'postgres'),
         password: config.get<string>('PASSWORD', 'password'),
-        synchronize: config.get<boolean>('SYNC', true) //Only for development mode. Use "false" for production.
+        synchronize: config.get<boolean>('SYNC', true), //Only for development mode. Use "false" for production.
+        entities: [User, UserHistory, UserSecret]
       })
     })
   ]
