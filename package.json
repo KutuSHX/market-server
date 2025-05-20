@@ -78,7 +78,8 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "^database/database(|/.*)$": "<rootDir>/libs/database/src/$1"
+      "^database/database(|/.*)$": "<rootDir>/libs/database/src/$1",
+      "^rabbitmq/rabbitmq(|/.*)$": "<rootDir>/libs/rabbitmq/src/$1"
     }
   }
 }

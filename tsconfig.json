@@ -25,6 +25,12 @@
       "database/database/*": [
         "libs/database/src/*",
         "libs/database/src/*"
+      ],
+      "rabbitmq/rabbitmq": [
+        "libs/rabbitmq/src"
+      ],
+      "rabbitmq/rabbitmq/*": [
+        "libs/rabbitmq/src/*"
       ]
     }
   }
